@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: micronaut.neo4j.heroku
+---
+testFramework: junit
+sourceLanguage: java

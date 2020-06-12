@@ -1,0 +1,8 @@
+---
+micronaut:
+  application:
+    name: micronaut-neo4j-heroku
+
+---
+neo4j:
+  uri: bolt://${NEO4J_HOST:localhost}
