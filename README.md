@@ -14,3 +14,6 @@ then run as usual,
 
     heroku local web
  
+##Test endpoint
+ Sample endpoint printing the count of neo4j nodes is at `/hello` 
+ 
