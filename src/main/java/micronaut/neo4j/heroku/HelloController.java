@@ -21,34 +21,10 @@ public class HelloController {
 	@Get
 	@Produces(MediaType.TEXT_PLAIN)
 	public String index() {
-
 		Session session = driver.session();
 
 		Result result = session.run("Match (n) return count(n)");
 		List<Record> records = result.list();
 		return records.toString();
-
 	}
 }
-
-
-/*
-		try (Session s = driver.session()) {
-			String stmt = "MATCH (n) RETURN count(n)";
-//			return s.readTransaction(tx -> tx.run(stmt)).list(r -> r.asMap()).stream();
-			Stream<Map<String, Object>> str = s.readTransaction(tx -> {
-				Result result = tx.run(stmt);
-				return result.list(r -> r.asMap()).stream();
-
-			});
-
-//			System.out.println("list = " + list);
-
-			str.forEach( a -> {
-				System.out.println("a = " + a);
-			});
-
-			return "hello";
-		}
-
- */

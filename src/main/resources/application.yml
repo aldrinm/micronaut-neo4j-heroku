@@ -5,4 +5,7 @@ micronaut:
 
 ---
 neo4j:
-  uri: bolt://${NEO4J_HOST:localhost}
+  encryption: true
+  uri: ${GRAPHENEDB_BOLT_URL:`bolt://localhost`}
+  username: ${GRAPHENEDB_BOLT_USER:`neo4j`}
+  password: ${GRAPHENEDB_BOLT_PASSWORD:`neo4j`}

@@ -1,1 +1,1 @@
-web: java -Dmicronaut.environments=heroku -jar build/libs/micronaut-neo4j-heroku-0.1-all.jar
+web: java -Dmicronaut.environments=heroku $JAVA_OPTS -jar build/libs/micronaut-neo4j-heroku-0.1-all.jar

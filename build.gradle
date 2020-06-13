@@ -65,3 +65,7 @@ tasks.withType(JavaCompile){
     options.encoding = "UTF-8"
     options.compilerArgs.add('-parameters')
 }
+
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
